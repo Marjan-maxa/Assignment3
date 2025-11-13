@@ -1,4 +1,5 @@
 import 'package:assignment3/Calculator.dart';
+import 'package:assignment3/api_calling_core.dart';
 import 'package:assignment3/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 
@@ -26,6 +27,10 @@ class _MyAppState extends State<MyApp> {
       themeMode: themeMode,
       debugShowCheckedModeBanner: false  ,
       home: cal(toggle: (){toggle();},),
+      initialRoute: 'API',
+      routes:{
+        'API':(context)=>api(),
+      },
     );
   }
 }
